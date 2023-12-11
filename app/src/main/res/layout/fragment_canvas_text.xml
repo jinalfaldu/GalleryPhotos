@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:id="@+id/text_lib_main_layout"
+    android:background="#ff919191"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/text_lib_toolbar">
+
+        <hdphoto.galleryimages.gelleryalbum.Images_android.Ibex_CollageModule.CanvasText.CtMyEditText
+            android:textColor="@color/txt_color"
+            android:layout_gravity="center"
+            android:id="@+id/text_lib_edittext"
+            android:background="#00000000"
+            android:padding="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions"
+            android:textCursorDrawable="@null"
+            android:fontFamily="@font/poppins_regular" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/text_lib_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_lib_container">
+
+        <View
+            android:background="#99000000"
+            android:layout_width="match_parent"
+            android:layout_height="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/text_lib_keyboard"
+                android:background="@color/txt_color"
+                android:padding="5dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_text_lib_keyboard"
+                android:text="Keyboard"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/text_lib_font"
+                android:padding="5dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_text_lib_font"
+                android:text="Font"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/text_lib_color"
+                android:padding="5dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_text_lib_palette"
+                android:text="Color"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/text_lib_bg_color"
+                android:padding="5dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_text_bg_color"
+                android:text="Color"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/text_lib_align"
+                android:padding="5dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_text_lib_align_left"
+                android:text="Align"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/text_lib_ok"
+                android:padding="5dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_text_lib_done"
+                android:text="@android:string/ok"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/text_lib_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp"
+        android:layout_alignParentBottom="true">
+
+        <GridView
+            android:id="@+id/gridview_font"
+            android:padding="8dp"
+            android:paddingTop="0dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:numColumns="4" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/gridViewColorContainer"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:padding="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="#ffffffff"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Opacity"
+                    android:fontFamily="@font/poppins_regular"
+                    style="bold" />
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/seekbar_text_color_opacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="255"
+                    android:progress="255" />
+            </LinearLayout>
+
+            <GridView
+                android:gravity="center"
+                android:id="@+id/gridViewColor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:horizontalSpacing="1dp"
+                android:verticalSpacing="1dp"
+                android:stretchMode="columnWidth"
+                android:columnWidth="@dimen/colorGridColumnWidth"
+                android:numColumns="auto_fit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/gridViewBackgroundColorContainer"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:padding="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="#ffffffff"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Opacity"
+                    android:fontFamily="@font/poppins_regular"
+                    style="bold" />
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/seekbar_text_background_color_opacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="255"
+                    android:progress="255" />
+            </LinearLayout>
+
+            <GridView
+                android:gravity="center"
+                android:id="@+id/gridViewBackgroundColor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:horizontalSpacing="1dp"
+                android:verticalSpacing="1dp"
+                android:stretchMode="columnWidth"
+                android:columnWidth="@dimen/colorGridColumnWidth"
+                android:numColumns="auto_fit" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

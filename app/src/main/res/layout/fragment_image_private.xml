@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/rootview"
+    android:background="@drawable/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    >
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/linearLayout4">
+
+        <ProgressBar
+            android:id="@+id/loader"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="?android:attr/progressBarStyleLarge" />
+
+        <GridView
+            android:id="@+id/grid_view_private_photo_album"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:visibility="gone"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchMode="columnWidth"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomlayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:id="@+id/btnImageUnloackButton"
+            android:visibility="gone"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_alignParentRight="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/bottomlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adslayoutfraglockview">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/bottomControlLayout"
+            android:padding="@dimen/_2sdp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/edit_ic"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textSize="@dimen/_8sdp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/setWallpaper_ic"
+                    android:background="?attr/actionBarItemBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="center"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:textSize="@dimen/_7sdp"
+
+                    android:textColor="@color/purple_200"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:text="Wallpaper" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/delete_ic"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textSize="@dimen/_8sdp"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/share_ic"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textSize="@dimen/_8sdp"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/adslayoutfraglockview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <RelativeLayout
+        android:id="@+id/hintNoHideImageLayout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/imgnohideimage"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_180sdp"
+                android:src="@drawable/no_photo_video"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/grey"
+                android:gravity="center"
+                android:id="@+id/txtHintText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_hide_image"
+                android:lineSpacingExtra="@dimen/_3sdp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

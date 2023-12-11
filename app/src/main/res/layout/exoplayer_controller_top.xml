@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/superplayer_player_controller_back"
+        android:background="@null"
+        android:visibility="gone"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="back"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textColor="@android:color/white"
+        android:gravity="start|center_vertical"
+        android:id="@+id/superplayer_player_video_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:maxLines="1"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/superplayer_guideline"
+        app:layout_constraintStart_toEndOf="@+id/superplayer_player_controller_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/superplayer_player_controller_top_custom_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/superplayer_guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@+id/superplayer_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

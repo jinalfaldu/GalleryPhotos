@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_above="@+id/button_dummy"
+        android:layout_below="@+id/full_fragment_apply_filter_header"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/full_fragment_apply_filter_header"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:id="@+id/button_cancel_filter"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/cancel"
+            android:text="@android:string/cancel"
+            android:layout_weight="1"
+             />
+
+        <ImageView
+            android:gravity="center"
+            android:id="@+id/button_apply_filter"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/apply"
+            android:text="@android:string/ok"
+            android:layout_weight="1"
+             />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/button_dummy"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:text="Fx"
+            android:drawableTop="@drawable/lib_effect"
+            style="@style/effect_footer_imagebutton_style" />
+    </LinearLayout>
+</RelativeLayout>

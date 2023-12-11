@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/purple_200"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/title_sd"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:text="@string/sd_title"
+        android:layout_weight="0.1"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins_regular" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:weightSum="1"
+        android:layout_weight="0.8"
+        android:layout_below="@+id/title_sd">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+
+            <TextView
+                android:textSize="14sp"
+                android:gravity="start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sd_content_1"
+                android:fontFamily="@font/poppins_regular" />
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/content_1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+
+            <TextView
+                android:textSize="14sp"
+                android:gravity="start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sd_content_2"
+                android:fontFamily="@font/poppins_regular" />
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/content_2" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:textSize="16sp"
+        android:textColor="@color/purple_200"
+        android:layout_gravity="end"
+        android:id="@+id/ok_sd"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/grant_permission"
+        android:layout_weight="0.1"
+        android:fontFamily="@font/poppins_regular" />
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:background="#96000000"
+    android:paddingTop="0dp"
+    android:paddingBottom="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <FrameLayout
+        android:layout_gravity="center"
+        android:id="@+id/superplayer_player_play_wrapper_landscape"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="5dp">
+
+        <ImageView
+            android:id="@+id/superplayer_player_play_landscape"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/exo_controls_play_description"
+            app:srcCompat="@drawable/btn_play_song" />
+
+        <ImageView
+            android:id="@+id/exo_player_pause_landscape"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/exo_controls_pause_description"
+            app:srcCompat="@drawable/btn_pause_song" />
+    </FrameLayout>
+
+    <ImageButton
+        android:layout_gravity="center"
+        android:id="@+id/superplayer_player_next_landscape"
+        android:background="?android:attr/selectableItemBackground"
+        android:visibility="gone"
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="5dp"
+        android:contentDescription="@string/exo_controls_next_description"
+        android:layout_marginStart="8dp"
+        app:srcCompat="@drawable/ic_skip_next_white_36dp" />
+
+    <FrameLayout
+        android:layout_gravity="center"
+        android:id="@+id/superplayer_player_controller_bottom_custom_view_landscape"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="2dp" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:layout_gravity="center"
+        android:id="@+id/superplayer_player_position_duration_landscape"
+        android:padding="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:layout_marginEnd="8dp" />
+
+    <com.google.android.exoplayer2.ui.DefaultTimeBar
+        android:layout_gravity="center"
+        android:id="@+id/superplayer_player_progress_landscape"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:max="10"
+        android:progress="3"
+        android:layout_weight="1"
+        app:buffered_color="#8fffffff"
+        app:played_color="@color/yellow_theme"
+        app:scrubber_drawable="@drawable/progress_thumb"
+        app:unplayed_color="#8fffffff" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:layout_gravity="center"
+        android:id="@+id/superplayer_player_position_duration_landscape1"
+        android:padding="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/superplayer_player_current_quality_landscape"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp" />
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/superplayer_player_exit_fullscreen"
+        android:padding="@dimen/_2sdp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginRight="5dp"
+        android:contentDescription="@null" />
+</LinearLayout>

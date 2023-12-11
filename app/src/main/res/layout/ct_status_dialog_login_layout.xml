@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="90dp"
+            android:text="Host url title"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:hint="Your host url or empty"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            tools:text="Your Host URL or Empty for demo default" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="90dp"
+            android:text="carrier id title"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:hint="Your carrier id or empty"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            tools:text="Your carrier id or Empty for demo default" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:paddingTop="16dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="16dp"
+            android:text="LogIn"
+            android:textColor="@android:color/black"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

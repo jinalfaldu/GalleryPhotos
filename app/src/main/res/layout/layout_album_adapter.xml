@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_horizontal"
+    android:id="@+id/frame_layout_album_select"
+    android:paddingLeft="1dp"
+    android:paddingTop="1dp"
+    android:paddingRight="1dp"
+    android:paddingBottom="1dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:paddingStart="1dp"
+    android:paddingEnd="1dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crd"
+            android:background="@color/off_white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:id="@+id/image_view_album_image"
+                android:background="@color/off_white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:textSize="@dimen/_20sdp"
+                android:id="@+id/txttag"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular" />
+            android:text=&quot;@string/app_name&quot;/&gt;
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/btnMoreDetails"
+                android:layout_alignParentLeft="true"
+                android:layout_toStartOf="@+id/btnMoreDetails">
+
+                <TextView
+                    android:textSize="@dimen/_10sdp"
+
+                    android:textColor="@color/black"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/text_view_album_name"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:includeFontPadding="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:lines="1"
+                    android:fontFamily="@font/poppins_medium"
+                     />
+
+                <TextView
+                    android:textSize="@dimen/_8sdp"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/text_view_album_size"
+                    android:paddingLeft="@dimen/_3sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:text="Gallery"
+                    android:lines="1"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/poppins_regular"
+                     />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_gravity="right"
+                android:id="@+id/btnMoreDetails"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginRight="-10dp"
+                android:src="@drawable/ic_more"
+                android:tint="@color/black"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="bottom|right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_30sdp">
+
+        <ImageView
+            android:gravity="bottom|right"
+            android:id="@+id/view_alpha"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_select_folder"
+            android:scaleType="center" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/rel_play"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_25sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/ic_btn_play" />
+    </RelativeLayout>
+</FrameLayout>

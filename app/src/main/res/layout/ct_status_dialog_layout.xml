@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/dbox_btn_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16.0dip">
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:indeterminateTint="@color/black" />
+
+    <TextView
+        android:id="@+id/loading_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:alpha="0.7"
+        android:text="Loading Ads..."
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_medium"
+        android:includeFontPadding="false"
+        android:textSize="@dimen/_14sdp" />
+
+</LinearLayout>

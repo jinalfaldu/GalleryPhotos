@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:background="@drawable/blackbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/ll_top"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="@dimen/_18sdp"
+
+                            android:textColor="@color/white"
+                            android:id="@+id/txtTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:text="Write Access Required"
+                            android:layout_toLeftOf="@+id/txtCancel" />
+
+                        <ImageView
+                            android:id="@+id/txtCancel"
+                            android:padding="@dimen/_2sdp"
+                            android:layout_width="@dimen/_23sdp"
+                            android:layout_height="@dimen/_23sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:src="@drawable/btn_cancel"
+                            android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal"
+                        android:textColor="#a1a1a2"
+                        android:id="@+id/textDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:text="Please Choose the directory" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_120sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:src="@drawable/operate_write" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:layout_below="@+id/ll_top">
+
+                    <TextView
+                        android:textSize="18sp"
+
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ad_border_grey"
+                        android:padding="8dp"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_18sdp"
+                        android:layout_marginRight="@dimen/_9sdp"
+                        android:text="Cancel"
+                        android:layout_weight="1"
+                        android:layout_alignParentRight="true" />
+
+                    <TextView
+                        android:textSize="18sp"
+
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:id="@+id/txtOpen"
+                        android:background="@drawable/background_item_text_style"
+                        android:padding="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:text="Open"
+                        android:layout_weight="1"
+                        android:layout_alignParentRight="true" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

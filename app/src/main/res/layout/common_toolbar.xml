@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/toolbar">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:padding="@dimen/_8sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/backkk"  />
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginLeft="8dp"
+            android:textSize="@dimen/_14sdp"
+            android:includeFontPadding="false"
+            android:text="@string/app_name"
+            android:singleLine="true"
+            android:layout_marginStart="8dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/btnBack"
+             />
+
+        <TextView
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:id="@+id/btnMoveToAlbum"
+            android:padding="@dimen/_10sdp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Done"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/poppins_regular"
+             />
+    </RelativeLayout>
+</LinearLayout>

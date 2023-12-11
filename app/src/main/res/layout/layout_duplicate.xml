@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlCard"
+    android:padding="@dimen/_3sdp"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_1sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_1sdp"
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:id="@+id/imageLayout"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_centerVertical="true">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="@dimen/_5sdp" />
+
+                <ImageView
+                    android:id="@+id/play"
+                    android:visibility="gone"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_btn_play"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="play" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_toRightOf="@+id/imageLayout"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/imageLayout">
+
+                <TextView
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:ellipsize="end"
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:maxLines="1"
+                    android:fontFamily="@font/poppins_regular"
+                     />
+
+                <TextView
+                    android:textSize="10sp"
+                    android:textColor="@color/grey"
+                    android:ellipsize="end"
+                    android:id="@+id/size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_30_kb"
+                    android:maxLines="1"
+                    android:fontFamily="@font/poppins_regular" />
+
+                <TextView
+                    android:textSize="10sp"
+                    android:textColor="@color/grey"
+                    android:ellipsize="end"
+                    android:id="@+id/path"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/path"
+                    android:maxLines="2"
+                    android:fontFamily="@font/poppins_regular" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/img_unselected"
+                    android:padding="@dimen/_3sdp"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/unselected"
+                    android:layout_centerInParent="true" />
+
+                <ImageView
+                    android:id="@+id/img_selected"
+                    android:padding="@dimen/_3sdp"
+                    android:visibility="gone"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/dup_selected"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/duplicate_result"
+    android:background="@drawable/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_tab"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:padding="@dimen/_8sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/backkk" />
+
+            <TextView
+                android:id="@+id/tootbatTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_toRightOf="@+id/img_back"
+                android:fontFamily="@font/poppins_medium"
+                android:includeFontPadding="false"
+                android:text="Title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_banner"
+        android:layout_below="@+id/rl_tab">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/my_recycler_view"
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/btnDelete"
+            android:background="@drawable/btn_bg"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:text="Delete Now"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:fontFamily="@font/poppins_regular" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/small80_native" />
+
+    </RelativeLayout>
+</RelativeLayout>

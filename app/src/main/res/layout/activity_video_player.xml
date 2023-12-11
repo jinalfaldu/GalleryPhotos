@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/superplayer_namelay"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/toolbar">
+        android:background=&quot;@drawable/video_player_toolbar_bg&quot;&gt;
+        <ImageView
+            android:id="@+id/backbutton"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:padding="@dimen/_8sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/backkk"/>
+
+        <TextView
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/white"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:id="@+id/titlename"
+            android:paddingLeft="@dimen/_10sdp"
+            android:focusable="true"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/poppins_medium"
+            android:focusableInTouchMode="true"
+            android:fadingEdge="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Video Title"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:freezesText="true"
+            android:layout_toRightOf="@+id/backbutton"
+            android:marqueeRepeatLimit="marquee_forever" />
+
+        <ImageView
+            android:id="@+id/morevideoop"
+            android:visibility="gone"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <VideoView
+        android:id="@+id/videoView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+</LinearLayout>

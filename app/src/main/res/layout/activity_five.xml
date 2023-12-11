@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_banner"
+        android:layout_marginBottom="@dimen/_14sdp"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include layout="@layout/include_native_ads" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_230sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/obj5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10dp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/q4"
+                    android:textColor="@color/gray_73"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:id="@+id/tv_go_now"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:background="@drawable/btn_bg"
+                    android:gravity="center"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center"
+                        android:layout_gravity="center|center_horizontal"
+                        android:drawableRight="@drawable/baseline_right"
+                        android:fontFamily="@font/poppins_medium"
+                        android:includeFontPadding="false"
+                        android:text="Go Now"
+                        android:textStyle="normal"
+                        android:visibility="visible"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16sdp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/small80_native" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

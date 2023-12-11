@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:orientation="horizontal"
+    android:id="@+id/superplayer_controllerWrapper"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/superplayer_player_play"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:contentDescription="@null"
+        app:srcCompat="@drawable/btn_play_song" />
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/superplayer_player_pause"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:contentDescription="@null"
+        app:srcCompat="@drawable/btn_pause_song" />
+
+    <TextView
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/superplayer_player_position"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:text="video_time"
+        android:lines="1"
+        android:fontFamily="@font/poppins_regular" />
+
+    <com.google.android.exoplayer2.ui.DefaultTimeBar
+        android:layout_gravity="center_vertical"
+        android:id="@+id/superplayer_player_progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxWidth="10dp"
+        android:maxHeight="5dp"
+        android:layout_weight="1"
+        app:buffered_color="@color/white"
+        app:played_color="@color/yellow_theme"
+        app:scrubber_drawable="@drawable/progress_thumb"
+        app:unplayed_color="@color/white" />
+
+    <TextView
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/superplayer_player_duration"
+        android:visibility="visible"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:text="video_time"
+        android:lines="1"
+        android:fontFamily="@font/poppins_regular" />
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/superplayer_player_enter_fullscreen"
+        android:padding="2dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_switch_to_full_screen_button"
+        android:contentDescription="@null" />
+</LinearLayout>

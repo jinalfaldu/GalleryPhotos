@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/main_full"
+    android:background="@drawable/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    >
+
+    <include layout="@layout/common_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_native"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/include_native_ads" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:layout_above="@+id/ll_banner"
+            android:layout_below="@+id/ll_native">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/gray_73"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txt_desc"
+                    android:paddingLeft="@dimen/_3sdp"
+                    android:paddingRight="@dimen/_3sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:text="Please Remember this security question and answer. In case you forgot your password that time it will be help to reset your password."
+                    android:lineSpacingExtra="@dimen/_3sdp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_50sdp"
+                    android:layout_below="@+id/txt_desc">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_screen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:id="@+id/ll_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_12sdp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:layout_marginBottom="@dimen/_6sdp">
+
+
+                                <TextView
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textColor="@color/txt_color"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_5sdp"
+                                    android:text="Select Security Question : "
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:layout_toRightOf="@+id/img_1"
+                                    android:layout_centerVertical="true"
+                                     />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:layout_marginBottom="@dimen/_6sdp">
+
+                                <Spinner
+                                    android:textColor="@color/txt_color"
+                                    android:id="@+id/spinnerCustom"
+                                    android:background="@drawable/light_box"
+                                    android:paddingTop="@dimen/_4sdp"
+                                    android:paddingBottom="@dimen/_4sdp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:spinnerMode="dropdown"
+                                     />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:layout_marginBottom="@dimen/_6sdp">
+
+                                <TextView
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textColor="@color/txt_color"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_5sdp"
+                                    android:text="Enter Security Answer : "
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:layout_toRightOf="@+id/img_2"
+                                    android:layout_centerVertical="true"
+                                     />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:layout_marginBottom="@dimen/_12sdp">
+
+                                <EditText
+                                    android:textSize="@dimen/_12sdp"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="?android:attr/textColorSecondary"
+                                    android:id="@+id/editAnswer"
+                                    android:background="@drawable/light_box"
+                                    android:paddingLeft="@dimen/_12sdp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_36sdp"
+                                    android:hint="Answer"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:cursorVisible="true"
+                                    android:lines="1"
+                                    android:singleLine="true"
+                                    android:imeOptions="actionDone" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp">
+
+                                <TextView
+
+                                    android:textColor="@color/black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Enter Security Email:" />
+
+                                <EditText
+                                    android:textSize="@dimen/_12sdp"
+                                    android:id="@+id/editEmail"
+                                    android:background="@drawable/bg_round_corner"
+                                    android:paddingLeft="@dimen/_12sdp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_35sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:hint="Enter Your Email"
+                                    android:lines="1"
+                                    android:singleLine="true"
+                                    android:inputType="textEmailAddress" />
+
+                                <TextView
+                                    android:textSize="@dimen/_9sdp"
+                                    android:paddingLeft="@dimen/_3sdp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_1sdp"
+                                    android:text="@string/email_forget_hint" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:id="@+id/ll_snap"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_below="@+id/rl_screen">
+
+                        <TextView
+                            android:textSize="@dimen/_14sdp"
+                            android:textColor="@color/black"
+                            android:gravity="center_horizontal"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Hard to Remember ?"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                             />
+
+                        <TextView
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/grey"
+                            android:gravity="center_horizontal"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Save this image in your safe place."
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:lineSpacingExtra="@dimen/_3sdp" />
+
+                        <ImageView
+                            android:id="@+id/img_Snap"
+                            android:background="@drawable/snap_box"
+                            android:padding="@dimen/_10sdp"
+                            android:layout_width="@dimen/_38sdp"
+                            android:layout_height="@dimen/_38sdp"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_12sdp"
+                            android:src="@drawable/capture" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:layout_below="@+id/ll_snap">
+
+                        <TextView
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:id="@+id/btnSubmit"
+                            android:background="@drawable/btn_bg"
+                            android:paddingLeft="@dimen/_45sdp"
+                            android:paddingTop="@dimen/_8sdp"
+                            android:paddingRight="@dimen/_45sdp"
+                            android:paddingBottom="@dimen/_8sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Save"
+                            android:textAllCaps="false" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/ll_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <include layout="@layout/small80_native" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

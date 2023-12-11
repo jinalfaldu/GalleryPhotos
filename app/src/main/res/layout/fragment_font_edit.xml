@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/font_fragment_layout"
+    android:background="@drawable/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+           >
+
+            <ImageView
+                android:id="@+id/btn_cancel"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:background="?attr/actionBarItemBackground"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/backkk"
+                android:tint="@color/txt_color"/>
+
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_toRightOf="@+id/btn_cancel"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:text="Edit Text"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/_14sdp" />
+
+            <ImageView
+                android:id="@+id/tv_done"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/svae_img" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:id="@+id/tv_font_preview"
+        android:background="#50e5e5e5"
+        android:padding="5dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:text="Preview Text"
+        android:lines="1"
+        android:layout_below="@+id/toolbar"
+        android:fontFamily="@font/poppins_regular"
+         />
+
+    <EditText
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:gravity="center"
+        android:id="@+id/et_font_preview"
+        android:background="#50eeeeee"
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Text Here"
+        android:singleLine="true"
+        android:layout_below="@+id/tv_font_preview"
+        android:inputType="textNoSuggestions"
+        android:imeOptions="actionDone"
+        android:textCursorDrawable="@drawable/edtcursor" />
+
+    <GridView
+        android:gravity="center_horizontal"
+        android:id="@+id/gridview_font"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:numColumns="4"
+        android:layout_above="@+id/ll_customize_buttons_container"
+        android:layout_below="@+id/et_font_preview" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/ll_customize_buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/iv_font_color"
+            android:padding="@dimen/_5sdp"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/font_textcolor_black" />
+
+        <ImageView
+            android:id="@+id/iv_background_color"
+            android:padding="@dimen/_5sdp"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/font_bgcolor_black" />
+
+        <ImageView
+            android:id="@+id/iv_text_shadow"
+            android:padding="@dimen/_5sdp"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/font_textshadow_black" />
+    </LinearLayout>
+</RelativeLayout>

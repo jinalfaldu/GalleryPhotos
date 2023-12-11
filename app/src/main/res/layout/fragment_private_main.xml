@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/tabLayout"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/linearLayout">
+
+                <FrameLayout
+                    android:id="@+id/private_frame_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_alignParentBottom="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginHorizontal="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/editbox_bg"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/layPhotos"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtPhotos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="Photo"
+                                android:textAllCaps="false"
+                                android:textColor="@color/tab_txt"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <View
+                                android:id="@+id/img_photo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="1dp"
+                                android:layout_gravity="center"
+                                android:layout_marginHorizontal="@dimen/_30sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:background="@color/tab_txt"
+                                android:padding="@dimen/_5sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layVideos"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtVideos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_medium"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="Video"
+                                android:textAllCaps="false"
+                                android:textColor="@color/gray_73"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <View
+                                android:id="@+id/img_video"
+                                android:layout_width="wrap_content"
+                                android:layout_height="1dp"
+                                android:layout_gravity="center"
+                                android:layout_marginHorizontal="@dimen/_30sdp"
+                                android:layout_marginTop="@dimen/_7sdp"
+                                android:background="@color/tab_txt"
+                                android:padding="@dimen/_5sdp"
+                                android:visibility="invisible"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab"
+                    android:background="@color/purple_200"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/actionBarSize"
+                    android:layout_below="@+id/toolbar"
+                    app:tabIndicator="@drawable/ic_tab"
+                    app:tabIndicatorColor="@color/white"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabIndicatorHeight="@dimen/_2sdp"
+                    app:tabPaddingEnd="30dp"
+                    app:tabPaddingStart="30dp"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabTextColor="@color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/layoutHintLockView"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8">
+
+                        <ImageView
+                            android:id="@+id/img_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_180sdp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/_25sdp"
+                            android:layout_marginRight="@dimen/_25sdp"
+                            android:src="@drawable/ic_security_banner" />
+
+                        <TextView
+                            android:textSize="@dimen/_20sdp"
+                            android:textColor="@color/black"
+                            android:id="@+id/txt_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_18sdp"
+                            android:text="Secure Your Data"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:layout_below="@+id/img_icon"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textAlignment="center"
+                             />
+
+                        <TextView
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/grey"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/_12sdp"
+                            android:paddingRight="@dimen/_12sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_6sdp"
+                            android:text="@string/private_hint_text"
+                            android:layout_below="@+id/txt_title"
+                            android:lineSpacingExtra="@dimen/_3sdp"
+                            android:fontFamily="@font/poppins_regular" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_50sdp">
+
+                        <TextView
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:id="@+id/btnSetSecurity"
+                            android:background="@drawable/btn_bg"
+                            android:layout_width="@dimen/_150sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:text="Set Security"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:fontFamily="@font/poppins_regular" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <include layout="@layout/password_view" />
+
+        <include layout="@layout/empty_gm_no_photo_availble" />
+    </LinearLayout>
+</RelativeLayout>

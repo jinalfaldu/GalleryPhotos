@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_album_select"
+    android:background="@drawable/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:animateLayoutChanges="true">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/loader"
+            android:visibility="visible"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_centerInParent="true"
+            style="?android:attr/progressBarStyleLarge" />
+
+        <TextView
+            android:textColor="@color/grey"
+            android:id="@+id/text_view_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/error_null_cursor"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins_regular" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/grid_view_album_select"
+            android:paddingLeft="2dp"
+            android:paddingTop="2dp"
+            android:paddingRight="2dp"
+            android:visibility="gone"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchMode="columnWidth" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_camera"
+            android:layout_alignParentRight="true"
+            app:backgroundTint="@color/purple_200" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/hintMainPhotoLayout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/imgnohideimage"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="@dimen/_180sdp"
+                android:src="@drawable/no_photo_video"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/grey"
+                android:gravity="center"
+                android:id="@+id/txtHintText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_hide_image"
+                android:lineSpacingExtra="@dimen/_3sdp"
+                android:fontFamily="@font/poppins_regular" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

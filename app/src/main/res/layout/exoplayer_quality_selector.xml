@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <FrameLayout
+        android:id="@+id/superplayer_containerWrapper"
+        android:background="@color/default_playback_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/superplayer_guideline3"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/superplayer_player_quality_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp" />
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@+id/superplayer_guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.85" />
+</androidx.constraintlayout.widget.ConstraintLayout>

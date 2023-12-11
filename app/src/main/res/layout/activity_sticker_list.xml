@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/ll_sticker_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/textView_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zero_item_selected"
+                android:textAllCaps="true"
+                 />
+        </androidx.appcompat.widget.Toolbar>
+    </RelativeLayout>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/stickerList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_gravity="start"
+            android:id="@+id/navRecylerView"
+            android:layout_width="250dp"
+            android:layout_height="match_parent" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>

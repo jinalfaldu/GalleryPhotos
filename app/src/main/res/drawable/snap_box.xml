@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <corners android:radius="@dimen/_5sdp"/>
+            <solid android:color="@color/yellow_theme"/>
+            <stroke android:width="@dimen/_1sdp" android:color="@color/yellow_theme"/>
+            <size android:height="@dimen/_25sdp" android:width="@dimen/_25sdp"/>
+        </shape>
+    </item>
+</selector>

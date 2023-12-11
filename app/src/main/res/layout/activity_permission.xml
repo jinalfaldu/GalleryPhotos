@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/per_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlAds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/native_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlAllow"
+        android:layout_below="@+id/rlAds">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtPermission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text="Permission Request"
+                android:textAllCaps="false"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/_16sdp" />
+
+            <TextView
+                android:id="@+id/aaaa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:text="Need Permissions"
+                android:textColor="@color/txt_color"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/camera" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:includeFontPadding="false"
+                        android:text="Camera"
+                        android:textColor="@color/txt_color"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:includeFontPadding="false"
+                        android:text="To Take pictures &amp; Record Video."
+                        android:textColor="@color/txt_color"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/locations" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:includeFontPadding="false"
+                        android:text="Locations"
+                        android:textColor="@color/txt_color"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:includeFontPadding="false"
+                        android:text="Access This Device&apos;s Locations. "
+                        android:textColor="@color/txt_color"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/folder" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:includeFontPadding="false"
+                        android:text="Storage"
+                        android:textColor="@color/txt_color"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:includeFontPadding="false"
+                        android:text="To Save &amp; Share File."
+                        android:textColor="@color/txt_color"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlAllow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/native_containerBanner"
+        android:layout_marginBottom="@dimen/_30sdp">
+
+        <TextView
+            android:id="@+id/allowPermission"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/btn_bg"
+            android:fontFamily="@font/poppins_medium"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="Allow Permission"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/native_containerBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

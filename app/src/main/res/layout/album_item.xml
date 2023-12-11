@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_5sdp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/thumb_image_holder"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_centerHorizontal="true">
+
+        <FrameLayout
+            android:id="@+id/selection_frame"
+            android:background="@drawable/selector_box"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/thumb_image"
+            android:padding="@dimen/_3sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="@dimen/_3sdp" />
+    </FrameLayout>
+
+    <TextView
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/album_name"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_below="@+id/thumb_image_holder"
+        android:layout_centerHorizontal="true"
+         />
+</RelativeLayout>

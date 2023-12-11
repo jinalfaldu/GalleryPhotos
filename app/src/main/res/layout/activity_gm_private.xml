@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/toolbar">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:padding="@dimen/_8sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/backkk"   />
+
+        <TextView
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/white"
+            android:id="@+id/toolbarTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_45sdp"
+            android:layout_marginRight="@dimen/_45sdp"
+            android:text="Private"
+            android:lines="1"
+            android:layout_centerVertical="true"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/poppins_medium"
+             />
+
+        <ImageView
+            android:id="@+id/btnSortImage"
+            android:padding="@dimen/_2sdp"
+            android:visibility="gone"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:src="@drawable/sorting_header"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/native_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_header" />
+
+    <FrameLayout
+        android:id="@+id/fram_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_banner"
+        android:layout_below="@+id/native_container" />
+
+    <RelativeLayout
+        android:id="@+id/ll_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/small80_native" />
+
+    </RelativeLayout>
+</RelativeLayout>
